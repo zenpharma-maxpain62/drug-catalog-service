@@ -1,7 +1,7 @@
 name: ci drug catalog service
 on:
   workflow_dispatch:
-job:
+jobs:
   build:
     name: build and push docker image
     permissions:
