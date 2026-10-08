@@ -42,8 +42,8 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v6.1.0
         with:
-          region: ap-south-1
-          assume-role-arn: arn:aws:iam::134448505602:role/zenpharma-dev-github-actions-role
+          aws-region: ap-south-1
+          role-to-assume: arn:aws:iam::134448505602:role/zenpharma-dev-github-actions-role
           audience: sts.amazonaws.com
 
       - name: login to ecr
