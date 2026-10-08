@@ -35,8 +35,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=${{ var.SONAR_PROJECT_KEY }}
-            -Dsonar.organization=${{ var.SONAR_ORG }}
+            -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
+            -Dsonar.organization=${{ vars.SONAR_ORG }}
             -Dsonar.java.binaries=target/classes
 
       - name: configure aws credentials
@@ -101,7 +101,7 @@ jobs:
       - name: checkout gitops repo
         uses: actions/checkout@v4
         with:
-          repository: ${{ var.GITOPS_REPO }}
+          repository: ${{ vars.GITOPS_REPO }}
           token: ${{ secrets.GITOPS_TOKEN }} 
           path: _gitops
 
