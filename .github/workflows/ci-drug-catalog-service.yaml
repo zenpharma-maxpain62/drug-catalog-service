@@ -22,7 +22,7 @@ jobs:
       - name: setup java
         uses: actions/setup-java@v6
         with:
-          distribution: 'temurian'
+          distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
 
