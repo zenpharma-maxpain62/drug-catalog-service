@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-java@v6
         with:
           distribution: 'temurian'
-          version: '17'
+          java-version: '17'
           cache: 'maven'
 
       - name: compile build test
