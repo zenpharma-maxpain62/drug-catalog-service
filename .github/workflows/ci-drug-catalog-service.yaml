@@ -120,6 +120,8 @@ jobs:
           echo "New image tag: $IMAGE_TAG"
 
           sed -i "s/$CURRENT_IMAGE_TAG/$IMAGE_TAG/g" envs/dev/values-drug-catalog-service.yaml
+          grep "tag:" envs/dev/values-drug-catalog-service.yaml
           
           git add envs/dev/values-drug-catalog-service.yaml
+          git commit -m "update: drug catalog image tag- $IMAGE_TAG"
           git push
